@@ -199,6 +199,24 @@ function formatDate(date) {
 }
 
 /**
+ * Erzeuge die Einbettungs‑URL für OpenStreetMap. Ein kleiner
+ * Ausschnitt um die übergebenen Koordinaten wird berechnet und
+ * eine Markierung gesetzt. Die Breite/Höhe des Ausschnitts
+ * (delta) bestimmt, wie weit hinein gezoomt wird.
+ * @param {number} lat
+ * @param {number} lon
+ * @returns {string}
+ */
+function getMapEmbedSrc(lat, lon) {
+  const delta = 0.01; // ~1 km Umkreis
+  const minLat = lat - delta;
+  const maxLat = lat + delta;
+  const minLon = lon - delta;
+  const maxLon = lon + delta;
+  return `https://www.openstreetmap.org/export/embed.html?bbox=${minLon},${minLat},${maxLon},${maxLat}&marker=${lat},${lon}&layer=mapnik`;
+}
+
+/**
  * Build and update the list/grid of places
  */
 function renderPlaces() {
@@ -279,92 +297,42 @@ function statusLabel(status) {
  * Render the Leaflet map and markers
  */
 function renderMap() {
-  // If Leaflet failed to load (e.g. CDN blocked), skip rendering
-  if (typeof L === "undefined") {
-    const mapEl = document.getElementById("map");
-    if (mapEl) {
-      mapEl.innerHTML =
-        state.lang === "de"
-          ?
-            "<p style=\"padding:1rem;\">Die interaktive Karte konnte nicht geladen werden. Bitte überprüfen Sie Ihre Internetverbindung oder laden Sie die Seite später erneut.</p>"
-          :
-            "<p style=\"padding:1rem;\">The interactive map could not be loaded. Please check your internet connection or try again later.</p>";
-    }
+  // Hole das Karten‑Iframe
+  const mapFrame = document.getElementById("map");
+  if (!mapFrame) return;
+  // Wenn keine Orte gefiltert wurden, zeige eine leere Karte an
+  if (!state.filteredPlaces.length) {
+    mapFrame.src = "";
     return;
   }
-  // Initialize map if not yet created
-  if (!state.map) {
-    state.map = L.map("map", { scrollWheelZoom: true });
-    // Use the standard tile server; fallback to non subdomain to avoid DNS or firewall blocks
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(state.map);
+  // Bestimme das aktuell ausgewählte Objekt (oder das erste der Liste)
+  let place = state.filteredPlaces.find((p) => p.id === state.selectedPlaceId);
+  if (!place) {
+    place = state.filteredPlaces[0];
   }
-  // Center the map on selected city
-  const center = cityCenter(state.city);
-  state.map.setView(center, 13);
-  // Remove existing markers
-  state.markers.forEach(({ marker }) => state.map.removeLayer(marker));
-  state.markers = [];
-  // Add markers for filtered places
-  state.filteredPlaces.forEach((place) => {
-    const color = statusColour(place.status);
-    const icon = L.divIcon({
-      className: "custom-pin",
-      html: `<div style="width:18px;height:18px;border-radius:50%;background:${color};border:3px solid white;box-shadow:0 0 0 2px rgba(23,32,51,.2)"></div>`,
-      iconSize: [18, 18],
-      iconAnchor: [9, 9]
-    });
-    const marker = L.marker([place.latitude, place.longitude], { icon }).addTo(
-      state.map
-    );
-    marker.bindPopup(buildPopup(place));
-    marker.on("click", () => renderDetail(place.id));
-    state.markers.push({ id: place.id, marker });
-  });
+  // Setze den iframe‑Link entsprechend den Koordinaten
+  mapFrame.src = getMapEmbedSrc(place.latitude, place.longitude);
 }
 
 /**
  * Convert status to colour for marker
  * @param {string} status
  */
-function statusColour(status) {
-  switch (status) {
-    case "OPEN":
-      return "#0e9f6e"; // green
-    case "LIMITED":
-      return "#d69e2e"; // amber
-    case "CLOSED":
-      return "#dc2626"; // red
-    default:
-      return "#64748b"; // grey
-  }
-}
-
-/**
- * Build popup HTML for marker
- * @param {object} place
- */
-function buildPopup(place) {
-  return `
-    <div style="min-width:180px">
-      <strong>${place.name}</strong><br>
-      <span>${statusLabel(place.status)}</span><br>
-      <small>${t("checkedAt")}: ${formatDate(new Date(place.lastChecked))}</small>
-    </div>
-  `;
-}
+// Die Leaflet‑spezifischen Funktionen statusColour und buildPopup wurden
+// entfernt, da die Karte nun über ein OpenStreetMap‑iframe realisiert
+// wird und keine Markerfarben oder Popups erzeugt werden müssen.
 
 /**
  * Move map view and open popup for a specific marker
  * @param {number} id
  */
 function focusMarker(id) {
-  const entry = state.markers.find((m) => m.id === id);
   const place = state.filteredPlaces.find((p) => p.id === id);
-  if (entry && place) {
-    state.map.setView([place.latitude, place.longitude], 15);
-    entry.marker.openPopup();
+  if (!place) return;
+  state.selectedPlaceId = place.id;
+  const mapFrame = document.getElementById("map");
+  if (mapFrame) {
+    mapFrame.src = getMapEmbedSrc(place.latitude, place.longitude);
   }
 }
 

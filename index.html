@@ -4,21 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accessible Sight Status</title>
-  <!-- Leaflet CSS -->
   <!--
-    Leaflet styles are loaded from jsDelivr rather than unpkg. Some
-    browser extensions and corporate firewalls block assets from
-    unpkg.com; jsDelivr provides the same files but via a
-    widely‑whitelisted CDN. If the CDN is still blocked, the map
-    area will remain blank; the application will still function
-    otherwise.
+    Hinweis: Die interaktive Karte wird über einen eingebetteten
+    OpenStreetMap‑Ausschnitt angezeigt. Daher wird keine externe
+    Leaflet‑Bibliothek geladen. Um die Karte anzuzeigen, nutzen wir
+    ein <iframe> mit den entsprechenden Koordinaten. Dadurch bleibt
+    die Seite auch funktionsfähig, wenn CDNs blockiert sind.
   -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-iZcPzUJ7oox96D65dZrnxKfnLBba1Xw9sLgpFHQcyOw="
-    crossorigin="anonymous"
-  />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -66,7 +58,22 @@
       </p>
     </section>
     <!-- Map container -->
-    <div id="map" class="map-container"></div>
+    <!--
+      Die Karte wird über ein <iframe> eingebettet. Der src‑Parameter
+      wird zur Laufzeit durch das Skript gesetzt, um die passende
+      Position und Markierung anzuzeigen. Das iframe trägt dieselbe
+      Klasse wie das bisherige Div, damit die bestehenden Styles
+      weiterhin greifen.
+    -->
+    <iframe
+      id="map"
+      class="map-container"
+      src=""
+      title="Karte"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style="border: 0"
+    ></iframe>
     <!-- Places list -->
     <section id="placesGrid" class="places"></section>
     <!-- Detail card -->
@@ -100,12 +107,11 @@
   <footer>
     <p>&copy; 2026 Accessible Sight Status</p>
   </footer>
-  <!-- Leaflet JS -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-Q6+c/6BxCTMVk8kAOncZ5+YDOM8Iky3Uczdlz7YT1T4="
-    crossorigin="anonymous"
-  ></script>
+  <!--
+    Es wird keine externe Kartenbibliothek eingebunden. Die Karte
+    wird über ein OSM‑iframe geladen. Sollte die Einbettung nicht
+    erreichbar sein, bleibt der Platzhalter leer.
+  -->
   <!-- App JS -->
   <script src="app.js"></script>
 </body>

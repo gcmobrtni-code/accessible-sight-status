@@ -66,6 +66,12 @@ main {
 }
 
 /* Map container */
+/* Map container
+   Sowohl das <iframe> als auch ein evtl. übrig gebliebenes <div>
+   können diese Klasse tragen. Höhe, Breite und optische Effekte
+   werden hier definiert. Die Kartenbibliothek wird nicht
+   extern geladen; die eigentliche Karte wird über den src
+   des <iframe> gesteuert. */
 .map-container {
   height: 400px;
   width: 100%;
@@ -73,6 +79,15 @@ main {
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* Sicherstellen, dass ein iframe innerhalb der Map‑Containerklasse
+   vollständig den verfügbaren Platz nutzt und keine Ränder hat. */
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* Places grid */
