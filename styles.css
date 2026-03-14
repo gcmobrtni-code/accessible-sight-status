@@ -1,4 +1,4 @@
-/* Basic reset */
+/* Global styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,16 +7,16 @@
 }
 
 body {
-  color: #333;
   background-color: #f8f9fa;
+  color: #333;
   line-height: 1.6;
 }
 
 header {
-  background: #21409a;
+  background-color: #21409a;
   color: #fff;
-  padding: 1rem;
   text-align: center;
+  padding: 1rem;
 }
 
 header h1 {
@@ -24,56 +24,74 @@ header h1 {
 }
 
 header .tagline {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #c7d4ed;
 }
 
 main {
-  padding: 1.5rem;
   max-width: 960px;
   margin: 0 auto;
+  padding: 1.5rem;
 }
 
+/* Controls */
 .controls {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.controls label {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
+.control-label {
   font-weight: bold;
 }
 
+.control-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Status info */
 .status-info {
-  margin-bottom: 1rem;
   font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .disclaimer {
+  margin-top: 0.25rem;
   font-size: 0.8rem;
   color: #555;
-  margin-top: 0.25rem;
 }
 
+/* Map container */
+.map-container {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Places grid */
 .places {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
+/* Place card */
 .place-card {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: transform 0.1s ease;
 }
 
@@ -81,38 +99,119 @@ main {
   transform: translateY(-2px);
 }
 
-.place-header {
-  background-color: #eef2fb;
-  padding: 0.5rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
+.place-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 .place-body {
   padding: 0.75rem;
-  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.place-body p {
-  margin-bottom: 0.5rem;
+.place-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.place-body .status {
-  margin-top: auto;
+.place-title {
+  font-size: 1rem;
   font-weight: bold;
 }
 
-.status.open {
-  color: #28a745;
+.place-subtitle {
+  font-size: 0.8rem;
+  color: #555;
 }
-.status.closed {
-  color: #dc3545;
+
+.mini-list {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem;
 }
-.status.limited {
-  color: #ffc107;
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge.open {
+  background-color: #28a745;
+}
+.badge.limited {
+  background-color: #d69e2e;
+}
+.badge.closed {
+  background-color: #dc3545;
+}
+.badge.unverified {
+  background-color: #6c757d;
+}
+
+/* Detail card */
+.detail-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail-card.empty {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.detail-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.info-box {
+  font-size: 0.8rem;
+}
+
+.info-box .label {
+  font-weight: bold;
+  color: #555;
+}
+
+.source-link {
+  color: #21409a;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .sources {
@@ -126,7 +225,7 @@ main {
 .sources ul {
   list-style-type: disc;
   padding-left: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 footer {

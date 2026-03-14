@@ -1,53 +1,228 @@
 [
   {
     "id": 1,
+    "name": "Galleria dell’Accademia",
     "city": "Florence",
-    "name": "Galleria dell'Accademia",
+    "latitude": 43.776798,
+    "longitude": 11.258528,
+    "description": "Museum housing Michelangelo’s David and other Renaissance masterpieces.",
+    "description_de": "Museum, in dem Michelangelos David und andere Meisterwerke der Renaissance ausgestellt sind.",
+    "wheelchair": true,
+    "notes": "Barrier‑free entrance, fully accessible route, accessible bathroom; tactile maps available.",
+    "notes_de": "Barrierefreier Eingang, vollständig barrierefreie Route, barrierefreies WC; taktile Karten verfügbar.",
     "status": "OPEN",
-    "visibility": "FULL",
-    "accessibility": {
-      "wheelchair": true,
-      "entrance": "wheelchair‑friendly entrance",
-      "toilet": true,
-      "notes": "Fully step‑free route, accessible toilets, tactile aids and free loan wheelchairs."
-    },
-    "source": "Visit Tuscany",
-    "lastChecked": "2026-03-13",
-    "url": "https://www.visittuscany.com/en/ideas/barrier-free-art-venues-in-florence/",
-    "description": "Die Galleria dell’Accademia ist vollständig barrierefrei. Sie verfügt über einen stufenlosen Eingang, einen behindertengerechten Rundgang, barrierefreie Toiletten sowie ein Tastmodell und taktile Karten.【231862406706439†L197-L205】"
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【231862406706439†L197-L205】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
   },
   {
     "id": 2,
+    "name": "Uffizi Galleries",
     "city": "Florence",
-    "name": "Uffizien",
+    "latitude": 43.767788,
+    "longitude": 11.255256,
+    "description": "World‑renowned art museum with works by Botticelli, Leonardo and other masters.",
+    "description_de": "Weltberühmtes Kunstmuseum mit Werken von Botticelli, Leonardo und anderen Meistern.",
+    "wheelchair": true,
+    "notes": "Accessible entrance via the Vasari Corridor, lifts to all floors, accessible toilets, ramp access at Palazzo Pitti and free wheelchair rental.",
+    "notes_de": "Zugang über den Vasari-Korridor, Aufzüge zu allen Stockwerken, barrierefreie Toiletten, Rampe am Palazzo Pitti und kostenlose Rollstuhl-Ausleihe.",
     "status": "OPEN",
-    "visibility": "FULL",
-    "accessibility": {
-      "wheelchair": true,
-      "entrance": "wheelchair‑friendly entrance",
-      "toilet": true,
-      "notes": "Rollstuhlgerechter Eingang, Aufzüge zu allen Stockwerken, barrierefreie Toiletten, rampenloser Zugang beim Palazzo Pitti, kostenlose Leihrollstühle und Blindenhunde erlaubt."
-    },
-    "source": "Visit Tuscany",
-    "lastChecked": "2026-03-13",
-    "url": "https://www.visittuscany.com/en/ideas/barrier-free-art-venues-in-florence/",
-    "description": "Die Uffizien bieten einen rollstuhlgerechten Eingang, Aufzüge zu allen Stockwerken, barrierefreie Toiletten, einen rampenlosen Zugang beim Palazzo Pitti, kostenlose Leihrollstühle sowie Blindenhunde.【231862406706439†L216-L232】"
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【231862406706439†L216-L232】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
   },
   {
     "id": 3,
+    "name": "Florence Cathedral (Santa Maria del Fiore)",
+    "city": "Florence",
+    "latitude": 43.773251,
+    "longitude": 11.255474,
+    "description": "Iconic Gothic cathedral known for Brunelleschi’s dome and Giotto’s bell tower.",
+    "description_de": "Ikonische gotische Kathedrale, bekannt für Brunelleschis Kuppel und Giottos Glockenturm.",
+    "wheelchair": false,
+    "notes": "Accessibility details not verified; please check official website before your visit.",
+    "notes_de": "Angaben zur Barrierefreiheit nicht verifiziert; bitte prüfen Sie die offizielle Website vor Ihrem Besuch.",
+    "status": "UNVERIFIED",
+    "lastChecked": "2026-03-01",
+    "sources": []
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 4,
+    "name": "Ponte Vecchio",
+    "city": "Florence",
+    "latitude": 43.768009,
+    "longitude": 11.253165,
+    "description": "Historic bridge over the Arno lined with shops selling jewellery and art.",
+    "description_de": "Historische Brücke über den Arno, gesäumt von Läden mit Schmuck und Kunst.",
+    "wheelchair": true,
+    "notes": "Flat stone surface with slight inclines; no specific accessibility features documented.",
+    "notes_de": "Flache Pflasterfläche mit leichten Steigungen; keine speziellen Barrierefreiheitsmerkmale dokumentiert.",
+    "status": "UNVERIFIED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【818171817303841†L29-L31】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 5,
+    "name": "Basilica di Santa Croce",
+    "city": "Florence",
+    "latitude": 43.768562,
+    "longitude": 11.262166,
+    "description": "Franciscan basilica housing the tombs of Michelangelo, Galileo and other luminaries.",
+    "description_de": "Franziskanische Basilika mit den Gräbern von Michelangelo, Galileo und anderen Berühmtheiten.",
+    "wheelchair": false,
+    "notes": "No specific accessibility details found; please verify locally.",
+    "notes_de": "Keine spezifischen Barrierefreiheitsdetails gefunden; bitte vor Ort überprüfen.",
+    "status": "UNVERIFIED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【551114817285797†L33-L36】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 6,
+    "name": "Palazzo Pitti",
+    "city": "Florence",
+    "latitude": 43.7642,
+    "longitude": 11.2489,
+    "description": "Renaissance palace with extensive galleries and the Boboli Gardens.",
+    "description_de": "Renaissancepalast mit umfangreichen Galerien und den Boboli-Gärten.",
+    "wheelchair": false,
+    "notes": "Accessibility details not verified; please check official website before visiting.",
+    "notes_de": "Angaben zur Barrierefreiheit nicht verifiziert; bitte prüfen Sie die offizielle Website vor Ihrem Besuch.",
+    "status": "UNVERIFIED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【113083616817243†L143-L145】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 7,
+    "name": "Colosseum",
     "city": "Rome",
-    "name": "Colosseum Archaeological Park",
+    "latitude": 41.890251,
+    "longitude": 12.492373,
+    "description": "Ancient Roman amphitheatre and one of the world’s most famous landmarks.",
+    "description_de": "Antikes römisches Amphitheater und eines der bekanntesten Wahrzeichen der Welt.",
+    "wheelchair": true,
+    "notes": "Accessible lift to upper levels; accessible toilet; some paths uneven.",
+    "notes_de": "Barrierefreier Aufzug zu den oberen Ebenen; barrierefreies WC; einige Wege uneben.",
+    "status": "LIMITED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【602404612872030†L46-L47】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 8,
+    "name": "Vatican Museums",
+    "city": "Rome",
+    "latitude": 41.906487,
+    "longitude": 12.453641,
+    "description": "Museums of the Vatican displaying art and artefacts from centuries of Church history.",
+    "description_de": "Museen des Vatikans mit Kunstwerken und Artefakten aus Jahrhunderten der Kirchengeschichte.",
+    "wheelchair": true,
+    "notes": "Accessible routes signposted; lifts available; free wheelchair rental.",
+    "notes_de": "Barrierefreie Routen ausgeschildert; Aufzüge vorhanden; kostenlose Rollstuhl-Ausleihe.",
     "status": "OPEN",
-    "visibility": "FULL",
-    "accessibility": {
-      "wheelchair": true,
-      "entrance": "wheelchair‑friendly entrance",
-      "toilet": true,
-      "notes": "Barrierefreie Eingänge und Aufzug zum Obergeschoss."
-    },
-    "source": "Turismo Roma",
-    "lastChecked": "2026-03-13",
-    "url": "https://www.turismoroma.it/en/roma-accessibile",
-    "description": "Die Seite \"Rome accessible\" liefert verifizierte Informationen zur Barrierefreiheit. Mithilfe der Filter \"Accessible entrance\" und \"Toilet\" lassen sich barrierefreie Orte wie das Kolosseum finden.【688153619941189†L383-L401】"
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【577270737692997†L31-L34】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 9,
+    "name": "St. Peter’s Basilica",
+    "city": "Rome",
+    "latitude": 41.902168,
+    "longitude": 12.453937,
+    "description": "Largest church in the world and centre of Catholicism.",
+    "description_de": "Größte Kirche der Welt und Zentrum des Katholizismus.",
+    "wheelchair": true,
+    "notes": "Accessible entrance at the left colonnade; lifts available to the basilica floor.",
+    "notes_de": "Barrierefreier Eingang an der linken Kolonnade; Aufzüge zur Basilikafläche vorhanden.",
+    "status": "OPEN",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【635204876648893†L31-L33】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 10,
+    "name": "Trevi Fountain",
+    "city": "Rome",
+    "latitude": 41.900932,
+    "longitude": 12.483313,
+    "description": "17th‑century Baroque fountain famous for coin‑throwing ritual.",
+    "description_de": "Barocker Brunnen aus dem 17. Jahrhundert, berühmt für den Münzwurfr Brauch.",
+    "wheelchair": false,
+    "notes": "Crowded area with steps; viewable from street level but not fully accessible.",
+    "notes_de": "Stark frequentierter Bereich mit Stufen; von der Straße aus sichtbar, aber nicht vollständig barrierefrei.",
+    "status": "LIMITED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【365943312931349†L31-L33】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 11,
+    "name": "Pantheon",
+    "city": "Rome",
+    "latitude": 41.898609,
+    "longitude": 12.476873,
+    "description": "Ancient Roman temple turned church with a striking domed roof.",
+    "description_de": "Antiker römischer Tempel, der zu einer Kirche mit auffälliger Kuppel umgewandelt wurde.",
+    "wheelchair": true,
+    "notes": "Level entrance; interior floor mostly flat; some crowding.",
+    "notes_de": "Ebenerdiger Eingang; Innenboden weitgehend eben; teilweise Gedränge.",
+    "status": "OPEN",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【715652980463424†L31-L33】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
+  },
+  {
+    "id": 12,
+    "name": "Roman Forum",
+    "city": "Rome",
+    "latitude": 41.892464,
+    "longitude": 12.485325,
+    "description": "Archaeological area with ruins of ancient government buildings.",
+    "description_de": "Archäologisches Gebiet mit Ruinen antiker Regierungsgebäude.",
+    "wheelchair": false,
+    "notes": "Some accessible paths and lifts, but terrain largely uneven; partial access.",
+    "notes_de": "Einige barrierefreie Wege und Aufzüge, aber Gelände weitgehend uneben; nur teilweise Zugang.",
+    "status": "LIMITED",
+    "lastChecked": "2026-03-01",
+    "sources": [
+      "【857978284463500†L31-L34】"
+    ]
+  ,
+  "image_url": "placeholder_light_gray_block.png"
   }
 ]
