@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible Attractions – Italy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Accessible Attractions – Italy</h1>
+    <p class="tagline">Information about the accessibility and current status of major landmarks in Florence and Rome. Updated automatically every 14&nbsp;days.</p>
+  </header>
+  <main>
+    <section class="controls">
+      <label for="citySelect">City:</label>
+      <select id="citySelect">
+        <option value="Florence">Florence</option>
+        <option value="Rome">Rome</option>
+      </select>
+      <label for="accessibleOnly">
+        <input type="checkbox" id="accessibleOnly">
+        Only wheelchair‑accessible
+      </label>
+    </section>
+    <section class="status-info">
+      <p><strong>Data last updated:</strong> <span id="lastUpdated">—</span></p>
+      <p class="disclaimer">
+        This site collects information from official sources such as Visit&nbsp;Tuscany, FeelFlorence and Turismo&nbsp;Roma. Updates depend on these sources and may be delayed if the original pages are not updated. See the bottom of the page for a list of sources.
+      </p>
+    </section>
+    <section id="places" class="places"></section>
+    <section class="sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>Visit Tuscany – <em>Museums and other barrier‑free art venues in Florence</em>【231862406706439†L197-L205】【231862406706439†L216-L232】</li>
+        <li>FeelFlorence – <em>Accessible Florence. Museums and much more</em>【18018461791518†L98-L105】</li>
+        <li>Turismo Roma – <em>Rome accessible</em>【688153619941189†L383-L401】</li>
+        <li>Official pages of each museum or landmark</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Accessible Attractions. All rights reserved.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

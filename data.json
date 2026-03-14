@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "city": "Florence",
+    "name": "Galleria dell'Accademia",
+    "status": "OPEN",
+    "visibility": "FULL",
+    "accessibility": {
+      "wheelchair": true,
+      "entrance": "wheelchair‑friendly entrance",
+      "toilet": true,
+      "notes": "Fully step‑free route, accessible toilets, tactile aids and free loan wheelchairs."
+    },
+    "source": "Visit Tuscany",
+    "lastChecked": "2026-03-13",
+    "url": "https://www.visittuscany.com/en/ideas/barrier-free-art-venues-in-florence/",
+    "description": "Die Galleria dell’Accademia ist vollständig barrierefrei. Sie verfügt über einen stufenlosen Eingang, einen behindertengerechten Rundgang, barrierefreie Toiletten sowie ein Tastmodell und taktile Karten.【231862406706439†L197-L205】"
+  },
+  {
+    "id": 2,
+    "city": "Florence",
+    "name": "Uffizien",
+    "status": "OPEN",
+    "visibility": "FULL",
+    "accessibility": {
+      "wheelchair": true,
+      "entrance": "wheelchair‑friendly entrance",
+      "toilet": true,
+      "notes": "Rollstuhlgerechter Eingang, Aufzüge zu allen Stockwerken, barrierefreie Toiletten, rampenloser Zugang beim Palazzo Pitti, kostenlose Leihrollstühle und Blindenhunde erlaubt."
+    },
+    "source": "Visit Tuscany",
+    "lastChecked": "2026-03-13",
+    "url": "https://www.visittuscany.com/en/ideas/barrier-free-art-venues-in-florence/",
+    "description": "Die Uffizien bieten einen rollstuhlgerechten Eingang, Aufzüge zu allen Stockwerken, barrierefreie Toiletten, einen rampenlosen Zugang beim Palazzo Pitti, kostenlose Leihrollstühle sowie Blindenhunde.【231862406706439†L216-L232】"
+  },
+  {
+    "id": 3,
+    "city": "Rome",
+    "name": "Colosseum Archaeological Park",
+    "status": "OPEN",
+    "visibility": "FULL",
+    "accessibility": {
+      "wheelchair": true,
+      "entrance": "wheelchair‑friendly entrance",
+      "toilet": true,
+      "notes": "Barrierefreie Eingänge und Aufzug zum Obergeschoss."
+    },
+    "source": "Turismo Roma",
+    "lastChecked": "2026-03-13",
+    "url": "https://www.turismoroma.it/en/roma-accessibile",
+    "description": "Die Seite \"Rome accessible\" liefert verifizierte Informationen zur Barrierefreiheit. Mithilfe der Filter \"Accessible entrance\" und \"Toilet\" lassen sich barrierefreie Orte wie das Kolosseum finden.【688153619941189†L383-L401】"
+  }
+]
