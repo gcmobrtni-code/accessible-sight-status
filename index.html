@@ -5,11 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Accessible Sight Status</title>
   <!-- Leaflet CSS -->
+  <!--
+    Leaflet styles are loaded from jsDelivr rather than unpkg. Some
+    browser extensions and corporate firewalls block assets from
+    unpkg.com; jsDelivr provides the same files but via a
+    widely‑whitelisted CDN. If the CDN is still blocked, the map
+    area will remain blank; the application will still function
+    otherwise.
+  -->
   <link
     rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-o9N1jQghire4Yyn5prc8g8G+vNfMKDXbQmkZv1DsYS0="
-    crossorigin=""
+    href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-iZcPzUJ7oox96D65dZrnxKfnLBba1Xw9sLgpFHQcyOw="
+    crossorigin="anonymous"
   />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
@@ -94,9 +102,9 @@
   </footer>
   <!-- Leaflet JS -->
   <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-oU0fPwZMYsHB1aFkCI2AzvP3ya7n6q8Cl7xtYLfGzws="
-    crossorigin=""
+    src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-Q6+c/6BxCTMVk8kAOncZ5+YDOM8Iky3Uczdlz7YT1T4="
+    crossorigin="anonymous"
   ></script>
   <!-- App JS -->
   <script src="app.js"></script>

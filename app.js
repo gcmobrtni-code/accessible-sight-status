@@ -279,10 +279,24 @@ function statusLabel(status) {
  * Render the Leaflet map and markers
  */
 function renderMap() {
+  // If Leaflet failed to load (e.g. CDN blocked), skip rendering
+  if (typeof L === "undefined") {
+    const mapEl = document.getElementById("map");
+    if (mapEl) {
+      mapEl.innerHTML =
+        state.lang === "de"
+          ?
+            "<p style=\"padding:1rem;\">Die interaktive Karte konnte nicht geladen werden. Bitte überprüfen Sie Ihre Internetverbindung oder laden Sie die Seite später erneut.</p>"
+          :
+            "<p style=\"padding:1rem;\">The interactive map could not be loaded. Please check your internet connection or try again later.</p>";
+    }
+    return;
+  }
   // Initialize map if not yet created
   if (!state.map) {
     state.map = L.map("map", { scrollWheelZoom: true });
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    // Use the standard tile server; fallback to non subdomain to avoid DNS or firewall blocks
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(state.map);
   }
